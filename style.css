@@ -146,7 +146,7 @@ form>div {
   gap: 30px;
   }
   
-  li {
+  .todoList li {
     font-size: 1.8em;
   }
   
@@ -155,13 +155,13 @@ form>div {
     flex-direction: column;
   }
   
-  li button {
+ .todoList>li button {
     margin-bottom: 10px;
     font-size: 1.8em;
     padding: 5px 10px;
   }
   
-  li button:last-child {
+  .todoList>li button:last-child {
     margin-bottom: 0;
   }
 }
