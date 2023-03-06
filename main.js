@@ -102,5 +102,5 @@
       formRender.cInput.value = ''
     })
   }
-  
+  window.createTodoApp = createTodoApp;
 })();
