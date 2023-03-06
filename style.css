@@ -18,9 +18,8 @@ a {
   font-size: 2em;
 }
 
-.checkLinkStyle {
-  color: #3aa;
-  text-decoration: underline;
+a:active {
+  background-color: #3aa3;
 }
 
 li {
@@ -30,10 +29,10 @@ li {
 }
 
 .container {
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
@@ -58,8 +57,7 @@ h2 {
 }
 
 .todoList li {
-  width: 800px;
-  
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,13 +77,16 @@ input {
   outline: 0px;
   font-size: 2em;
 }
+
 input:focus {
   border-color: #3aa;
 }
+
 form {
   display: flex;
   margin-bottom: 30px;
 }
+
 form button {
   background-color: #3aa;
 }
@@ -93,6 +94,7 @@ form button {
 .todoList>li button {
   margin-left: 20px;
 }
+
 .doneBtn {
   background-color: #3aa;
 }
@@ -108,14 +110,37 @@ form>div {
   gap: 30px;
 }
 
-.links ul {
+.links {
   display: flex;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.links ul {
+  margin: auto;
+  display: flex;
+  gap: 30px;
   font-size: 6px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-@media ( max-width: 480px ) {
+.links a {
+  padding: 5px 10px;
+  border-bottom: 1px solid #3aa;
+  box-shadow: 5px 5px 10px -2px #999; 
+}
+
+@media ( max-width: 780px ) {
+  .links ul {
+    flex-direction: column;
+  }
+  
+  .links a:hover {
+    box-shadow: 5px 5px 5px -4px #999; ; 
+  }
+  
   form>div {
   flex-direction: column;
   gap: 30px;
@@ -129,16 +154,14 @@ form>div {
     display: flex;
     flex-direction: column;
   }
+  
   li button {
     margin-bottom: 10px;
     font-size: 1.8em;
     padding: 5px 10px;
   }
+  
   li button:last-child {
     margin-bottom: 0;
-  }
-  
-  ul {
-    overflow: all-scroll;
   }
 }
