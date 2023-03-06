@@ -7,6 +7,28 @@
   transition: .2s;
 }
 
+body {
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.checkLinkStyle {
+  color: #3aa;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+  font-size: 2em;
+  margin: auto;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -14,8 +36,7 @@
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px;
-  margin-bottom: 90px;
+  margin-top: 50px;
 }
 
 button {
@@ -36,13 +57,13 @@ h2 {
   margin-bottom: 30px;
 }
 
-li {
-  list-style-type: none;
-  font-size: 2em;
+.todoList li {
+  width: 800px;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 15px;
   box-shadow: 0px 0px 10px -2px #888;
   border-radius: 5px;
@@ -69,7 +90,7 @@ form button {
   background-color: #3aa;
 }
 
-li button {
+.todoList>li button {
   margin-left: 20px;
 }
 .doneBtn {
@@ -85,6 +106,13 @@ form>div {
   flex-direction: row;
   margin: auto;
   gap: 30px;
+}
+
+.links ul {
+  display: flex;
+  font-size: 6px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media ( max-width: 480px ) {
