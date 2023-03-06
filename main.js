@@ -1,6 +1,7 @@
 
 
 ( ()=> {
+  
   createTodoTitle =(title = 'Секретные дела')=> {
     let listTitle = document.createElement('h2');
     listTitle.innerHTML = title;  
@@ -31,7 +32,7 @@
   createTodoList =()=> {
 
     let todoList = document.createElement('ul');
-
+    todoList.classList = 'todoList';
     return todoList;
   };
   
@@ -58,9 +59,9 @@
       item,
       doneBtn,
       deleteBtn
-    }
+    };
     
-  }
+  };
   
   let createTodoApp = (appId, appTitle) => {
     
@@ -83,24 +84,23 @@
 //       Проверка инпута
       if (!formRender.cInput.value) {
         return;
-      }
-      
+      };
       let itemRender = createTodoItem(formRender.cInput.value);
 
       itemRender.doneBtn.addEventListener('click', ()=> {
         itemRender.item.classList.toggle('doneItem');
-      })
+      });
       
       itemRender.deleteBtn.addEventListener('click', ()=> {
         if ( confirm('Удалить ?') ) {
            itemRender.item.remove();
-        }
-        
-      })
+        };
+      });
       
-      listRender.append(itemRender.item)
-      formRender.cInput.value = ''
-    })
-  }
-  window.createTodoApp = createTodoApp;
+      listRender.append(itemRender.item);
+      formRender.cInput.value = '';
+    });
+  };
+ window.createTodoApp = createTodoApp;
 })();
+
